@@ -1,0 +1,28 @@
+#wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+#body{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    height: 1000px;
+    width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#ab{
+    height: 50px;
+    width: 100px;
+    background-color: aqua;
+    font-size: 30px;
+    font-family: "Inconsolata", serif;
+    text-align: center;
+}
