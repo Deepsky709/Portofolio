@@ -20,9 +20,27 @@
 
 #ab{
     height: 50px;
-    width: 100px;
+    width: 150px;
     background-color: aqua;
     font-size: 30px;
     font-family: "Inconsolata", serif;
     text-align: center;
+}
+
+#about{
+    padding: 20px;
+    background-color: #9370DB;
+    border-radius: 20px;
+    height: 100px;
+    width: auto;
+}
+
+#img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #DDA0DD;
+    outline-style: dashed;
+    outline-color: white;
+    
 }
