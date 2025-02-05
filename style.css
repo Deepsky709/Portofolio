@@ -12,7 +12,7 @@
     margin-right: auto;
     margin-top: 50px;
     height: 700px;
-    width: 500px;
+    width: auto;
     padding: 50px;
     border-radius: 10px;
     background-color: white;
@@ -46,9 +46,28 @@
     outline-width: thick;
 }
 
+#img2{
+    height: 325px;
+    width: 675px;
+    border-radius: 25px;
+    margin-left: 30px;
+}
+
+#img3{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
 #temp{
     margin-left: 75px;
     margin-top: 75px;
+}
+
+#port{
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 #spectext{
@@ -60,7 +79,7 @@
 
 #spectext2{
     font-size: 80px;
-    margin-top: -30px;
+    margin-top: -65px;
     color: white;
     font-family: "Bebas Neue", serif;
 }
@@ -71,4 +90,71 @@
     color: white;
     font-family: "Lexend Giga", serif;
     text-decoration: underline;
+}
+
+#spectext4{
+    font-size: 75px;
+    margin-top: -30px;
+    color: black;
+    font-family: "Lexend Giga", serif;
+    border-style: dashed;
+    border-width: thick;
+    border-color: black;
+    height: 100px;
+}
+
+#spectext5{
+    font-family: "Lexend Giga", serif;
+    font-size: 30px;
+}
+
+#spectext6{
+    font-family: "Lexend Giga", serif;
+    font-size: 75px;
+}
+
+#walloftext{
+    width: 300px;
+    background-color: #DCDCDC;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#row{
+    display:flex;
+    flex-direction: row;
+    margin-top: -30px;
+}
+
+#lang{
+    height: 205px;
+    width: 200px;
+    background-color: royalblue;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding: 5px;
+    z-index: 1;
+    position: absolute;
+    outline-style: solid;
+    outline-color: #222E50;
+    outline-width: thick;
+}
+
+#context{
+    font-family: "Lexend Giga", serif;
+    color: white;
+    height: 205px;
+    width: 210px;
+    background-color: royalblue;
+    margin-top: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 30px;
+    outline-style: solid;
+    outline-color: #222E50;
+    outline-width: thick;
+}
+
+#thing{
+
 }
