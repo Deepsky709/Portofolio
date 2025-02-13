@@ -2,6 +2,7 @@ let py = document.querySelector(".t1");
 let js = document.querySelector(".t2");
 let rs = document.querySelector(".t3");
 let rn = document.querySelector(".t4");
+let sharko = document.querySelector(".shark");
 
 
 let animation = gsap.to(".l1", {
@@ -39,6 +40,8 @@ let animation4 = gsap.to(".l4", {
 
 rn.addEventListener("mouseenter", () => animation4.play());
 rn.addEventListener("mouseleave", () => animation4.reverse());
+
+
 
 function aboutMe(){
     window.location.href = 'index.html';
@@ -80,24 +83,93 @@ function intro(){
     gsap.from('.t3', {
         y: 200,
         opacity: 0,
-        duration: 1.4,
+        duration: 1.3,
     });
     gsap.from('.t4', {
         y: 200,
         opacity: 0,
-        duration: 1.7,
+        duration: 1.5,
+    });
+    gsap.from('#row', {
+        x: 200,
+        opacity: 0,
+        duration: 0.6,
+    });
+    gsap.from('#spectext4', {
+        y: -200,
+        opacity: 0,
+        duration: 0.8,
     });
 }
 
 function intro2(numb1, numb2){
+    gsap.from('#head', {
+        x: -300,
+        duration: 0.7,
+    });
+    gsap.from('#head2', {
+        x: 300,
+        duration: 0.7,
+    });
+    gsap.from('#st', {
+        x: 200,
+        opacity: 0,
+        duration: 0.7,
+    });
+    gsap.from('#st2', {
+        x: -200,
+        opacity: 0,
+        duration: 0.7,
+    });
     gsap.from('.I'+numb1, {
-        y: 200,
+        x: 200,
         opacity: 0,
         duration: 1,
     });
     gsap.from('.I'+numb2, {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+    });
+    gsap.from('#batton', {
         y: 200,
         opacity: 0,
-        duration: 1.5,
+        duration: 1,
+    });
+}
+
+function intro3(numb1, numb2){
+    gsap.from('#head', {
+        x: 300,
+        duration: 0.7,
+    });
+    gsap.from('#head2', {
+        x: -300,
+        duration: 0.7,
+    });
+    gsap.from('#st', {
+        x: -200,
+        opacity: 0,
+        duration: 0.7,
+    });
+    gsap.from('#st2', {
+        x: 200,
+        opacity: 0,
+        duration: 0.7,
+    });
+    gsap.from('.I'+numb1, {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+    });
+    gsap.from('.I'+numb2, {
+        x: 200,
+        opacity: 0,
+        duration: 1,
+    });
+    gsap.from('#batton', {
+        y: -200,
+        opacity: 0,
+        duration: 1,
     });
 }
