@@ -46,3 +46,11 @@ function aboutMe(){
 function pyThon(){
     window.location.href = 'python.html';
 }
+
+function javaS(){
+    window.location.href = 'java.html';
+}
+
+function lua(){
+    window.location.href = 'lua.html';
+}

@@ -17,6 +17,17 @@
     background-color: white;
 }
 
+#body2{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: auto;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: white;
+}
+
 #ab{
     height: 50px;
     width: 150px;
@@ -97,7 +108,7 @@
 
 #spectext2{
     font-size: 80px;
-    margin-top: -65px;
+    margin-top: -45px;
     color: white;
     font-family: "Bebas Neue", serif;
 }
@@ -146,6 +157,20 @@
 #row2{
     display:flex;
     flex-direction: row;
+}
+#row3{
+    display:flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#col{
+    display:flex;
+    flex-direction: column;
+    width: 1500px;
+    height: auto;
 }
 
 #lang{
@@ -202,7 +227,6 @@
 #trap{
     border-right: 50px solid transparent;
 	height: 0;
-	width: 310px;
     font-family: "Lexend Giga", serif;
     font-size: 50px;
     
@@ -226,6 +250,55 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+}
+
+#head{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 85px;
+    font-family: "Lexend Giga", serif;
+}
+
+#head2{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Lexend Giga", serif;
+    font-size: 50px
+}
+
+#st{
+    margin-right: 575px;
+    font-family: "Lexend Giga", serif;
+}
+
+#st2{
+    font-family: "Lexend Giga", serif;
+}
+
+#image{
+    height: 350px;
+    width: 632px;
+    margin-left: 30px;
+    
+}
+
+#image2{
+    height: 350px;
+    width: 632px;
+    margin-left: 175px;
+}
+
+#batton{
+    height: 500px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    font-size: 25px;
+    font-family: "Lexend Giga", serif;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
 }
 
 .w{

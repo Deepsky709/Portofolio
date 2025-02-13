@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="outer">
+            <div id="row2">
+                <div id="trap" class="lw" onclick="aboutMe()">About Me</div>
+                <div id="trap2" class="g" onclick="pyThon()">Python</div>
+                <div id="trap2" class="w" onclick="javaS()">JS</div>
+                <div id="trap2" class="dg" onclick="aboutMe()">Lua</div>
+            </div>
+            
+            
+            <div id="body2">
+                <div id="col">
+                    <h1 id="head">Top Project</h1>
+                    <h1 id="head2">Card Matchup Game</h1>
+                    <div id="row3">
+                        <h1 id="st">Appearance</h1>
+                        <h1 id="st2">Source Code</h1>
+                    </div>
+                    <div id="row4">
+                        <img id="image" src="Caerd.png">
+                        <img id="image2" src="KJS.png">
+                    </div>
+                    <button id="batton" data-toggle="modal" data-target="#exampleModal">
+                        See The Code
+                    </button>
+                </div>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Card System</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            let cardsName = [];
+let buttonList = [[],[]];
+let coverList = [[],[]];
+
+let cturn = false;
+let creset = false;
+
+let fcard = 0;
+console.log(fcard)
+
+gsap.to("#final", {
+    opacity: 0,
+});
+
+function check(cardID, buttonID, coverID){
+    if (cardsName[1] == undefined){
+        //adding cards list and button list
+        let buttonName = document.getElementById("name"+buttonID);
+        gsap.to("#cover"+coverID, {
+            y: -300,
+            duration: 1.5,
+            opacity: 0,
+        });
+        console.log("buttonID: "+buttonID)
+        console.log("CoverID: "+coverID)
+        console.log("CardID: "+cardID)
+        if (buttonList[0][0] == undefined){
+            buttonList[0][0] = buttonID
+            coverList[0][0] = coverID
+        }else{
+            buttonList[1][0] = buttonID
+            coverList[1][0] = coverID
+        }
+        buttonName.disabled = true;
+        cardsName += cardID
+        console.log(coverList)
+        //checking if cards1 = cards2 and flip
+        if (cardsName[1] != undefined){
+            if (cardsName[0] == cardsName[1]){
+                fcard += 1
+                if (fcard == 8){
+                    console.log("YOU WIN")
+                    gsap.to("#final", {
+                        opacity: 1,
+                        duration: 2,
+                    });
+                }
+                gsap.to("#name"+buttonList[0][0], {
+                    y: -100,
+                    duration: 1.5,
+                    opacity: 0,
+                });
+                gsap.to("#name"+buttonList[1][0], {
+                    y: -100,
+                    duration: 1.5,
+                    opacity: 0,
+                });
+                creset = true;
+                setInterval(factReset, 3000);
+            }else{
+                cturn = true;
+                setInterval(cardReturn, 2000);
+                buttonName = document.getElementById("name"+buttonList[0][0]);
+                buttonName.disabled = false;
+                buttonName = document.getElementById("name"+buttonList[1][0]);
+                buttonName.disabled = false;
+            }
+        }
+    }
+    
+}
+
+function cardReturn(){
+    console.log(coverList)
+    if (cturn == true){
+        gsap.to("#cover"+coverList[0][0], {
+        y: 0,
+        duration: 1.5,
+        opacity: 1,
+        });
+        gsap.to("#cover"+coverList[1][0], {
+        y: 0,
+        duration: 1.5,
+        opacity: 1,
+        });
+        cardsName = [];
+        buttonList = [[],[]];
+        coverList = [[],[]];
+        cturn = false;
+    }
+}
+
+function factReset(){
+    if (creset == true){
+        cardsName = [];
+        buttonList = [[],[]];
+        coverList = [[],[]];
+        creset = false;
+    }
+}
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
