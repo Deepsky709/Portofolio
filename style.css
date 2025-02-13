@@ -22,7 +22,7 @@
     margin-left: auto;
     margin-right: auto;
     height: 800px;
-    width: auto;
+    width: 1595px;
     padding: 50px;
     border-radius: 20px;
     background-color: white;
@@ -267,7 +267,7 @@
 }
 
 #st{
-    margin-right: 575px;
+    margin-right: 500px;
     font-family: "Lexend Giga", serif;
 }
 
@@ -319,4 +319,9 @@
 .dg{
     border-bottom: 75px solid #C0C0C0;
     z-index: 2;
+}
+
+.b{
+    border-bottom: 75px solid #A9A9A9;
+    z-index: 1;
 }
